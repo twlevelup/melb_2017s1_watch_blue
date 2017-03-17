@@ -1,6 +1,6 @@
 # LevelUp Watch Edition App Development Environment
 
-[![Build Status](https://travis-ci.org/twlevelup/melb_2017s1_watch_cobalt.svg?branch=master)](https://travis-ci.org/twlevelup/melb_2017s1_watch_cobalt)
+[![Build Status](https://travis-ci.org/twlevelup/melb_2017s1_watch_cobalt.svg)](https://travis-ci.org/twlevelup/melb_2017s1_watch_cobalt)
 
 This git repo contains all the code you need to prototype apps for the Proto Watch.
 
