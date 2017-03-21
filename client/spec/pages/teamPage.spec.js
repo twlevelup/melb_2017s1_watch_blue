@@ -11,8 +11,9 @@ describe('Check-in dance', () => {
   describe('initial git commit', () => {
     it('should include the text "Made by:"', () => {
       expect(page.$el).toContainText('Made by:');
+      it('Check for name in team page', () => {
+        expect(page.$el).toContainText('Cameron');
+      });
     });
-
-    // TODO: Add a test to check for your name
   });
 });
