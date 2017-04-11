@@ -32,6 +32,5 @@ describe('Check-in dance', () => {
     it('should include Morin in the team page', () => {
       expect(page.$el).toContainText('Morin');
     });
-
   });
 });

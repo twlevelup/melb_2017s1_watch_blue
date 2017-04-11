@@ -1,5 +1,6 @@
 const Page = require('watch_framework').Page;
 const storage = require('../../storage');
+
 const jobFilterPage = Page.extend({
   id: 'jobFilterPage',
 
@@ -8,13 +9,8 @@ const jobFilterPage = Page.extend({
   },
 
   filterBySkill(skill) {
-
-    return this.jobsCollection.filter((job)=>{
-
-      return (job.Skill === skill);
-
-    });
-  }
+    return this.jobsCollection.filter(job => (job.Skill === skill));
+  },
 });
 
 module.exports = jobFilterPage;
