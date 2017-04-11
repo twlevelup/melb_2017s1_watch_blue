@@ -12,7 +12,7 @@ const homePage = Page.extend({
   buttonEvents: {
     right: 'goToContacts',
     top: 'scrollUp',
-    bottom: 'scrollDown',
+    bottom: 'goToAlertsPage',
   },
 
   goToContacts() {
@@ -23,9 +23,11 @@ const homePage = Page.extend({
     $('#watch-face').animate({ scrollTop: '-=70px' });
   },
 
-  scrollDown() {
-    $('#watch-face').animate({ scrollTop: '+=70px' });
+  goToAlertsPage() {
+    window.App.navigate('alerts');
   },
+
+
 
   render() {
     this.$el.html(this.template());

@@ -29,17 +29,7 @@ describe('The Home Page', () => {
         expect(page.scrollUp).toHaveBeenCalled();
       });
     });
-
-    describe('bottom', () => {
-      it('should scroll the watch face down', () => {
-        spyOn(page, 'scrollDown');
-        page.configureButtons();
-        eventHub.trigger('bottom');
-        expect(page.scrollDown).toHaveBeenCalled();
-      });
-    });
   });
-
   describe('rendering', () => {
     it('should produce the correct HTML', () => {
       page.render();
@@ -49,5 +39,13 @@ describe('The Home Page', () => {
     it('returns the view object', () => {
       expect(page.render()).toEqual(page);
     });
+  });
+  describe('alertsPage', () => {
+     it('Should take the user to the alerts page', () => {
+        spyOn(window.App, 'navigate');
+        page.configureButtons();
+        eventHub.trigger('bottom');
+        expect(window.App.navigate).toHaveBeenCalledWith('alerts');
+     });
   });
 });
