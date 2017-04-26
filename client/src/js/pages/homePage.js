@@ -28,7 +28,6 @@ const homePage = Page.extend({
   },
 
 
-
   render() {
     this.$el.html(this.template());
     return this;
