@@ -30,6 +30,7 @@ describe('The Home Page', () => {
       });
     });
   });
+
   describe('rendering', () => {
     it('should produce the correct HTML', () => {
       page.render();

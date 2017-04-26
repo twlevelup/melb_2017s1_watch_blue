@@ -4,6 +4,7 @@ const template = require('../../templates/pages/eventDetails.hbs');
 const $ = require('jquery');
 const storage = require('../../storage');
 
+
 const eventDetails = Page.extend({
 
   id: 'event-details',
