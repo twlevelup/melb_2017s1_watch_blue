@@ -42,10 +42,10 @@ describe('The Home Page', () => {
   });
   describe('alertsPage', () => {
     it('Should take the user to the alerts page', () => {
-       spyOn(window.App, 'navigate');
-       page.configureButtons();
-       eventHub.trigger('bottom');
-       expect(window.App.navigate).toHaveBeenCalledWith('alerts');
-     });
+      spyOn(window.App, 'navigate');
+      page.configureButtons();
+      eventHub.trigger('bottom');
+      expect(window.App.navigate).toHaveBeenCalledWith('alerts');
+    });
   });
 });
