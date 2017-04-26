@@ -13,11 +13,11 @@ describe('The Home Page', () => {
 
   describe('button event handlers', () => {
     describe('right', () => {
-      it('should take the user to the contacts page', () => {
+      it('should take the user to the jobFilter page', () => {
         spyOn(window.App, 'navigate');
         page.configureButtons();
         eventHub.trigger('right');
-        expect(window.App.navigate).toHaveBeenCalledWith('contacts');
+        expect(window.App.navigate).toHaveBeenCalledWith('jobFilterPage');
       });
     });
 

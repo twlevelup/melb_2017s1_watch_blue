@@ -5,6 +5,7 @@ const contacts = require('./contactsPage');
 const eventsList = require('./eventsList');
 const eventDetails = require('./eventDetails');
 const alerts = require('./alertPage');
+const jobFilterPage = require('./jobFilterPage');
 
 // TODO autogenerate this file
 module.exports = {
@@ -15,4 +16,5 @@ module.exports = {
   eventsList,
   eventDetails,
   alerts,
+  jobFilterPage,
 };

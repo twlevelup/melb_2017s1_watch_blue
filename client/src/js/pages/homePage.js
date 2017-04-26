@@ -10,9 +10,13 @@ const homePage = Page.extend({
   template,
 
   buttonEvents: {
-    right: 'goToContacts',
+    right: 'jobFilterPage',
     top: 'scrollUp',
     bottom: 'goToAlertsPage',
+  },
+
+  jobFilterPage() {
+    window.App.navigate('jobFilterPage');
   },
 
   goToContacts() {
@@ -26,8 +30,6 @@ const homePage = Page.extend({
   goToAlertsPage() {
     window.App.navigate('alerts');
   },
-
-
   render() {
     this.$el.html(this.template());
     return this;
