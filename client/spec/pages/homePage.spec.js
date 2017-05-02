@@ -34,7 +34,7 @@ describe('The Home Page', () => {
   describe('rendering', () => {
     it('should produce the correct HTML', () => {
       page.render();
-      expect(page.$el).toContainText('Hello, World!');
+      expect(page.$el).toContainText("G'day, World!");
     });
 
     it('returns the view object', () => {

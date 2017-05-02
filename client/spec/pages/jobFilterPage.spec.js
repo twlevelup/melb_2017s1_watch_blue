@@ -16,8 +16,8 @@ describe('The Job Filter Page', () => {
   describe('filterBySkill', () => {
     it('should have a job collection', () => {
       const expectedJobs = [
-        { JobName: 'Chef', Skill: 'Hospitality', SeenByUser: 'false' },
-        { JobName: 'Bar tender', Skill: 'Hospitality', SeenByUser: 'false' },
+        { JobName: 'Chef', Skill: 'Hospitality', SeenByUser: true },
+        { JobName: 'Bar tender', Skill: 'Hospitality', SeenByUser: false },
       ];
 
       expect(page.filterBySkill('Hospitality')).toEqual(expectedJobs);
