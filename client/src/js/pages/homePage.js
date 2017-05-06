@@ -7,8 +7,9 @@ const storage = require('../../storage');
 const homePage = Page.extend({
 
   id: 'home',
-  data: storage.dummmyData,
-  alertCount: 5,
+  initialize() {
+    this.jobsCollection = storage.dummyData.jobs;
+  },
   template,
 
   buttonEvents: {
@@ -35,13 +36,16 @@ const homePage = Page.extend({
 
 
   countUnreadAlerts() {
-    return this.data.jobs
+    return this.jobsCollection
       .filter(job => !job.SeenByUser)
-      .length;
+        .length;
   },
 
   render() {
-    this.$el.html(this.template());
+    const alertData = {
+      count: this.countUnreadAlerts(),
+    };
+    this.$el.html(this.template(alertData));
     return this;
   },
 
