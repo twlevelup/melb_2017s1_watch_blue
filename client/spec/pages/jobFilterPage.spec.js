@@ -20,7 +20,7 @@ describe('The Job Filter Page', () => {
         spyOn(window.App, 'navigate');
         page.configureButtons();
         eventHub.trigger('face');
-        expect(window.App.navigate).toHaveBeenCalledWith('jobListPage');
+        expect(window.App.navigate).toHaveBeenCalledWith('jobFilterPage');
       });
     });
   });

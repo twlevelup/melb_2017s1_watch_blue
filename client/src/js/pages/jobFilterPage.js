@@ -1,18 +1,18 @@
 const Page = require('watch_framework').Page;
 const storage = require('../../storage');
 const template = require('../../templates/pages/skillPage.hbs');
-const Menu = require('watch_framework').Menu;
+// const Menu = require('watch_framework').Menu;
 
 const jobFilterPage = Page.extend({
   id: 'jobFilterPage',
 
   buttonEvents: {
-    face: 'jobList',
-    left: 'back'
+    face: 'jobFilterPage',
+    left: 'back',
   },
 
   jobFilterPage() {
-    window.App.navigate('jobList');
+    window.App.navigate('jobFilterPage');
   },
 
   template,
@@ -27,8 +27,8 @@ const jobFilterPage = Page.extend({
 
   render() {
     const filterBySkill = this.filterBySkill('Barista');
-    console.log(filterBySkill);
-    this.$el.html(this.template({ data : filterBySkill }));
+    // console.log(filterBySkill);
+    this.$el.html(this.template({ data: filterBySkill }));
     return this;
   },
 });
