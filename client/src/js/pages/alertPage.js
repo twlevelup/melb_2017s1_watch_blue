@@ -1,6 +1,5 @@
 const Page = require('watch_framework').Page;
 const template = require('../../templates/pages/alert.hbs');
-const storage = require('../../storage');
 
 const alertPage = Page.extend({
   id: 'alerts',
@@ -14,7 +13,7 @@ const alertPage = Page.extend({
   },
 
   render() {
-    this.$el.html(this.template(storage.dummyData));
+    this.$el.html(this.template());
     return this;
   },
 });
