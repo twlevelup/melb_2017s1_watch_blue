@@ -26,8 +26,7 @@ const jobFilterPage = Page.extend({
   },
 
   render() {
-    const filterBySkill = this.filterBySkill('Barista');
-    // console.log(filterBySkill);
+    const filterBySkill = this.filterBySkill('Programming');
     this.$el.html(this.template({ data: filterBySkill }));
     return this;
   },

@@ -14,7 +14,6 @@ const alertPage = Page.extend({
   },
 
   render() {
-    console.log(storage.dummyData.jobs);
     this.$el.html(this.template(storage.dummyData));
     return this;
   },

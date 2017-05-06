@@ -5,6 +5,7 @@
   {"JobName":"Full stack programmer", "Skill":"Programming", "SeenByUser":false},
   {"JobName":"Retails assitant", "Skill":"Customer Service", "SeenByUser":false},
   {"JobName":"C Programmer", "Skill":"Programming", "SeenByUser":false},
+  {"JobName":"Web Developer", "Skill":"Programming", "SeenByUser":false},
   {"JobName":"Quick coffee maker", "Skill":"Barista", "SeenByUser":false},
   {"JobName":"Bar tender", "Skill":"Hospitality", "SeenByUser":false}
 ]}
