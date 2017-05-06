@@ -14,7 +14,7 @@ describe('The Event details page', () => {
   describe('a new event details page', () => {
     it('should load the events data', () => {
       // FIXME this is crap, data should be passed in to the constructor for the page
-      expect(page.data).toEqual(storage.eventsData);
+      expect(page.data).toEqual(storage.skillsList);
     });
   });
 
@@ -65,10 +65,20 @@ describe('The Event details page', () => {
     });
   });
 
+  describe('filterBySkill', () => {
+    it('should have a job collection', () => {
+      const expectedJobs = [
+        { JobName: 'Chef', Skill: 'Hospitality', SeenByUser: true },
+        { JobName: 'Bar tender', Skill: 'Hospitality', SeenByUser: false },
+      ];
+
+      expect(page.filterBySkill('Hospitality')).toEqual(expectedJobs);
+    });
+  });
+
   describe('rendering', () => {
     const eventData = new Backbone.Model({
-      name: 'event name',
-      description: 'description',
+      JobName: 'Job',
     });
 
     beforeEach(() => {
@@ -77,12 +87,7 @@ describe('The Event details page', () => {
 
     it('should have the correct title', () => {
       page.render();
-      expect(page.$el).toContainHtml('<h1>event name</h1>');
-    });
-
-    it('should have the correct event description', () => {
-      page.render();
-      expect(page.$el).toContainHtml('<p>description</p>');
+      expect(page.$el).toContainHtml('<th>Job Name</th>');
     });
 
     it('returns the view object', () => {

@@ -17,7 +17,7 @@ describe('The Home Page', () => {
         spyOn(window.App, 'navigate');
         page.configureButtons();
         eventHub.trigger('right');
-        expect(window.App.navigate).toHaveBeenCalledWith('jobFilterPage');
+        expect(window.App.navigate).toHaveBeenCalledWith('eventsList');
       });
     });
 

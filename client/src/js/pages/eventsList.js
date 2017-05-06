@@ -16,7 +16,7 @@ const eventsList = Menu.extend({
   },
 
   getMenuItemLabel(menuItem) {
-    return menuItem.get('name');
+    return menuItem.get('Skill');
   },
 
   select() {
@@ -26,7 +26,7 @@ const eventsList = Menu.extend({
     window.App.navigate(`eventDetails/${this.selected.cid}`);
   },
 
-  collection: storage.eventsData,
+  collection: storage.skillsList,
 
 });
 

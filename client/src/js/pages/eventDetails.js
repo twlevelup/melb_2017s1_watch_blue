@@ -9,7 +9,9 @@ const eventDetails = Page.extend({
 
   id: 'event-details',
 
-  data: storage.eventsData,
+  data: storage.skillsList,
+
+  jobsCollection: storage.dummyData.jobs,
 
   template,
 
@@ -31,10 +33,14 @@ const eventDetails = Page.extend({
     return this.data.get(this.options.cid);
   },
 
+  filterBySkill(skill) {
+    return this.jobsCollection.filter(job => (job.Skill === skill));
+  },
+
   render() {
     // TODO if showPage was creataing a new instance of this view the model could be passed in
     const details = this.getEventData().toJSON();
-    this.$el.html(this.template(details));
+    this.$el.html(this.template({ jobs: this.filterBySkill(details.Skill) }));
     return this;
   },
 

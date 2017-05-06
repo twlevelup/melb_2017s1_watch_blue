@@ -13,9 +13,9 @@ const homePage = Page.extend({
   template,
 
   buttonEvents: {
-    right: 'jobFilterPage',
     top: 'scrollUp',
     bottom: 'goToAlertsPage',
+    right: 'goToEventsList',
   },
 
   jobFilterPage() {
@@ -24,6 +24,10 @@ const homePage = Page.extend({
 
   goToContacts() {
     window.App.navigate('contacts');
+  },
+
+  goToEventsList() {
+    window.App.navigate('eventsList');
   },
 
   scrollUp() {
