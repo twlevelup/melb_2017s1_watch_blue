@@ -1,1 +1,22 @@
 <h1>Skills</h1>
+<!-- <ul>
+{{#each data}}
+    <li>{{ JobName }}</li>
+    <li>{{ Skill }}</li>
+    <li>{{ SeenByUser }}</li>
+{{/each}}
+</ul> -->
+
+<table>
+  <tr>
+    <th>Job name</th>
+    <th>Skill</th>
+
+  </tr>
+  {{#each data}}
+  <tr>
+    <td>{{ JobName }}</td>
+    <td>{{ Skill }}</td>
+    <!-- <td>{{ SeenByUser }}</td> -->
+  {{/each}}
+</tr>
