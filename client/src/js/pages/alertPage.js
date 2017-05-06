@@ -5,6 +5,14 @@ const storage = require('../../storage');
 const alertPage = Page.extend({
   id: 'alerts',
   template,
+  buttonEvents: {
+    top: 'homePage',
+  },
+
+  homePage() {
+    window.App.navigate('');
+  },
+
   render() {
     console.log(storage.dummyData.jobs);
     this.$el.html(this.template(storage.dummyData));
