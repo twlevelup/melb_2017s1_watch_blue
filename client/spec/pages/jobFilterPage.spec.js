@@ -1,4 +1,5 @@
 const JobFilterPage = require('../../src/js/pages/jobFilterPage');
+const eventHub = require('watch_framework').EventHub;
 
 let page;
 
@@ -12,6 +13,18 @@ describe('The Job Filter Page', () => {
       expect(page.jobsCollection).toBeDefined();
     });
   });
+
+  describe('button event handlers', () => {
+    describe('face', () => {
+      it('should take the user to the jobList page', () => {
+        spyOn(window.App, 'navigate');
+        page.configureButtons();
+        eventHub.trigger('face');
+        expect(window.App.navigate).toHaveBeenCalledWith('jobListPage');
+      });
+    });
+  });
+
 
   describe('filterBySkill', () => {
     it('should have a job collection', () => {
